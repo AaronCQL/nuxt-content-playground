@@ -1,0 +1,13 @@
+{
+  "name": "dynamic-routes",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.5.2",
+    "nuxt": "^2.14.0"
+  }
+}
