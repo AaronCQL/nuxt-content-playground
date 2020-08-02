@@ -1,0 +1,14 @@
+{
+  "name": "nuxt-content-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.5.2",
+    "nuxt": "^2.14.0"
+  }
+}
