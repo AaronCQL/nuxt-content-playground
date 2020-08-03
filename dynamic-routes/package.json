@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt generate"
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   },
   "dependencies": {
     "@nuxt/content": "^1.5.2",
