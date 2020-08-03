@@ -3,9 +3,12 @@
     <nav>
       <ul>
         <li>
-          <nuxt-link to="/">/</nuxt-link>
+          <nuxt-link to="/index">/</nuxt-link>
         </li>
         <br />
+        <li>
+          <nuxt-link to="/first/index">/first</nuxt-link>
+        </li>
         <li>
           <nuxt-link to="/first/hello">/first/hello</nuxt-link>
         </li>
@@ -13,6 +16,9 @@
           <nuxt-link to="/first/world">/first/world</nuxt-link>
         </li>
         <br />
+        <li>
+          <nuxt-link to="/second/index">/second</nuxt-link>
+        </li>
         <li>
           <nuxt-link to="/second/hello">/second/hello</nuxt-link>
         </li>

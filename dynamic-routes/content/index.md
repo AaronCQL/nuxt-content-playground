@@ -1,3 +1,5 @@
 # Index Page
 
-Hello from the **Index Page**.
+Hello from `/`.
+
+[/first](/first/index)
