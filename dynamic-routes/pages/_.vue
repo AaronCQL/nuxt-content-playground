@@ -1,6 +1,6 @@
 <template>
   <article>
-    <nuxt-content :document="page" />
+    <nuxt-content :document="content" />
   </article>
 </template>
 
@@ -15,21 +15,18 @@ export default {
     }
   },
   async asyncData({ $content, params, error }) {
-    let page;
-    const pages = await $content(params.pathMatch).fetch();
+    let content = await $content(params.pathMatch).fetch();
 
-    if (Array.isArray(pages)) {
-      page = pages.find((page) => page.slug === "index");
-      if (!page) {
-        return error({ statusCode: 404, message: "Page not found" });
-      }
-    } else {
-      page = pages;
+    if (Array.isArray(content)) {
+      content = content.find((page) => page.slug === "index");
+    }
+
+    if (!content) {
+      return error({ statusCode: 404, message: "Page not found" });
     }
 
     return {
-      page,
-      params,
+      content,
     };
   },
 };
