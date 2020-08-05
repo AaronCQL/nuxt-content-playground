@@ -15,19 +15,24 @@ export default {
     }
   },
   async asyncData({ $content, params, error }) {
-    let content = await $content(params.pathMatch).fetch();
+    try {
+      let content = await $content(params.pathMatch).fetch();
 
-    if (Array.isArray(content)) {
-      content = content.find((page) => page.slug === "index");
-    }
+      if (Array.isArray(content)) {
+        content = content.find((page) => page.slug === "index");
+      }
 
-    if (!content) {
+      if (!content) {
+        throw new Error();
+      }
+
+      return {
+        content,
+      };
+    } catch (e) {
+      console.log(e);
       return error({ statusCode: 404, message: "Page not found" });
     }
-
-    return {
-      content,
-    };
   },
 };
 </script>
